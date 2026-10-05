@@ -4,9 +4,6 @@ An improved homepage for the RESONANCE AI4D Lab @CTBE, built on the free **Shuff
 
 ## Run
 No build step and no dependencies. Open `index.html` in a browser, or serve the folder:
-```
-python3 -m http.server 8000   # then visit http://localhost:8000
-```
 Partner logos are hot-linked from the current Google Sites page, so they need an internet connection.
 
 ## What it implements
@@ -17,7 +14,6 @@ Partner logos are hot-linked from the current Google Sites page, so they need an
 
 ## Design and technical decisions
 - Template, stripped Shuffle supplied the layout and header/footer styling. I removed the demo content (stock photos, services, portfolio, fake team, statistics, FAQ, contact form, address, phone, social links) and unused libraries (AOS, Swiper, Isotope, GLightbox, PureCounter, Bootstrap JS). The page is about 900 KB on disk, mostly Bootstrap CSS and icon fonts.
--Template files untouched where possible.`main.css` is the original; all changes are in `assets/css/lab.css`. `main.js` is a trimmed version of the original.
 - System fonts instead of Google Fonts: no external font requests, which helps on slow connections.
 - Contrast fix. The template's accent (#1bbca3) with white text fails contrast, so I use a darker teal (#0b6e75) on light sections and a lighter teal on dark ones. Contrast is not yet measured with a tool.
 - Identity.The hero's two out-of-phase waves express "resonance". It animates once and is static for reduced-motion users.
@@ -30,10 +26,10 @@ Partner logos are hot-linked from the current Google Sites page, so they need an
 - "CTBE" and "AI4D" are left unexpanded because the site does not expand them in the text I could read.
 - Bootstrap's full CSS is still loaded, which is heavier than needed; purging it would be the next step.
 - Not tested in real browsers or with a screen reader; contrast and Lighthouse scores not yet measured. The template's favicon was removed because it is not the lab's.
-- No news block, because no real items were available.
+
 
 ## Time spent
-_ 8hrs
+_ 7hrs
 
 ## AI and development-tool disclosure
 _ I use sample websie templates related to this site and caude ai for more elaboration.
