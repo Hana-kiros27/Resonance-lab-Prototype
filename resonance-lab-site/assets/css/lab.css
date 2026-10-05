@@ -1,0 +1,311 @@
+/* RESONANCE Lab overrides for the Shuffle template. main.css is left untouched. */
+:root{
+  --default-font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --heading-font:Charter,"Iowan Old Style",Georgia,serif;
+  --nav-font:var(--default-font);
+  --default-color:#333f44;--heading-color:#10212b;
+  --accent-color:#0b6e75;--nav-hover-color:#0b6e75;--nav-dropdown-hover-color:#0b6e75;
+}
+@media (prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
+:focus-visible{outline:3px solid #e0a73c;outline-offset:3px}
+.skip{position:absolute;left:-999px;background:#10212b;color:#fff;padding:.5rem 1rem;z-index:9999}
+.skip:focus{left:1rem;top:1rem}
+.header .logo .sitename{font-size:1.6rem;margin:0;font-weight:700;font-family:var(--heading-font);color:var(--heading-color)}
+.header .logo .sitename small{font-size:1.1rem;font-weight:400;color:var(--accent-color)}
+button.mobile-nav-toggle{background:none;border:0;padding:0;line-height:1;color:var(--nav-color)}
+
+.lab-hero{padding:140px 0 70px;min-height:70vh;display:flex;align-items:center;background:var(--background-color);color:var(--default-color)}
+.lab-hero h1{font-size:clamp(2.4rem,7vw,4.25rem);line-height:1.05;margin:0 0 1rem;color:var(--heading-color)}
+.lab-hero .lede{font-size:1.25rem;max-width:36rem;margin:0 0 1.75rem;color:#d3dedb}
+.wave{width:100%;height:clamp(60px,10vw,110px);display:block;margin-bottom:1.5rem}
+.wave path{fill:none;stroke-width:3;vector-effect:non-scaling-stroke}
+.wave .w1{stroke:#5cc3c9}.wave .w2{stroke:#e0a73c;opacity:.85}
+@media (prefers-reduced-motion:no-preference){
+  .wave path{stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 2.2s ease-out forwards}
+  .wave .w2{animation-delay:.25s}
+}
+@keyframes draw{to{stroke-dashoffset:0}}
+.btn-lab{display:inline-block;padding:.8rem 1.4rem;margin:0 .75rem .75rem 0;border-radius:4px;font-weight:600;text-decoration:none;border:2px solid #5cc3c9;background:#5cc3c9;color:#0e1a18}
+.btn-lab.alt{background:transparent;color:#5cc3c9}
+.btn-lab:hover{filter:brightness(1.12)}
+
+.lab-link{display:block;height:100%;padding:1.25rem 1.5rem;border:1px solid #cfd8d6;border-radius:6px;background:var(--surface-color);text-decoration:none;color:var(--default-color)}
+.lab-link h3{font-size:1.25rem;margin:0 0 .25rem;color:var(--accent-color)}
+.lab-link p{margin:0}
+.lab-link:hover{border-color:var(--accent-color)}
+.partners{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;align-items:center}
+.partners img{display:block;height:72px;width:auto;max-width:100%;background:#fff;padding:6px;border-radius:4px}
+.header .logo img{height:40px;width:auto;max-height:40px;margin-right:.6rem}
+/* About page */
+.page-top.tight{min-height:0}
+.mission{background:#084c52;color:#fff;padding-bottom:70px}
+.mission h1,.mission h2{color:#fff}
+.mission h1{font-size:1rem;font-family:var(--default-font);font-weight:600;margin:0 0 1.5rem;color:#bfe3e5}
+.mission-body{max-width:48rem}
+.mission h2{font-size:clamp(2rem,5vw,3rem);margin:0 0 1rem}
+.mission p{font-size:1.15rem;line-height:1.7;color:#fff}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:1.5rem 0 2rem}
+.chips li{display:flex;align-items:center;gap:.5rem;padding:.45rem 1rem;border:1px solid rgba(255,255,255,.5);border-radius:999px;color:#fff}
+.motto{margin:0;padding:1.25rem 0 0 1.25rem;border-left:4px solid #e0a73c}
+.motto p{font-family:var(--heading-font);font-size:clamp(1.5rem,4vw,2.25rem);line-height:1.25;margin:0 0 .5rem;color:#fff}
+.motto footer{color:#bfe3e5;font-size:.95rem}
+.stat{padding:1.75rem;border:2px solid var(--accent-color);border-radius:8px}
+.stat-num{font-family:var(--heading-font);font-size:clamp(2.2rem,6vw,3.25rem);line-height:1;margin:0 0 .75rem;color:var(--accent-color);font-weight:700}
+.stat-label{margin:0;font-size:1.05rem;line-height:1.6}
+.obj{height:100%;padding:1.5rem;background:var(--surface-color);border:1px solid #cfd8d6;border-radius:6px}
+.obj-icon{display:block;font-size:2rem;line-height:1;color:var(--accent-color);margin-bottom:.75rem}
+.obj h3{font-size:1.2rem;margin:0 0 .5rem;color:var(--heading-color)}
+.obj p{margin:0;line-height:1.65}
+/* Research page */
+.theme{height:100%;padding:1.75rem;background:var(--surface-color);border:1px solid #cfd8d6;border-top:5px solid var(--accent-color);border-radius:6px}
+.theme-icon{display:block;font-size:2rem;line-height:1;color:var(--accent-color);margin-bottom:.75rem}
+.theme h2{font-size:1.5rem;margin:0 0 .5rem}
+.theme-lead{margin:0 0 1rem;font-size:1.05rem}
+.theme ul{margin:0;padding-left:1.1rem}
+.theme li{margin-bottom:.65rem;line-height:1.6}
+.cta-actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.btn-lab-outline{display:inline-block;padding:.7rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;border:2px solid #fff;color:#fff}
+.btn-lab-outline:hover{background:rgba(255,255,255,.15);color:#fff}
+.updates .cta{margin-top:0}
+/* Team page */
+.person{height:100%;padding:1.5rem;background:var(--surface-color);border:1px solid #cfd8d6;border-radius:6px}
+.avatar{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--accent-color);color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:.9rem}
+.avatar.icon{background:#084c52;font-size:1.5rem}
+.person-role{margin:0 0 .15rem;font-weight:600;color:var(--accent-color);font-size:.95rem}
+.person h3{font-size:1.25rem;margin:0 0 .15rem;color:var(--heading-color)}
+.degree{margin:0 0 .6rem;color:#44565f;font-size:.95rem}
+.person p:last-child{margin:0;line-height:1.6}
+.staff{list-style:none;padding:0;margin:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.staff li{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.9rem 1.1rem;background:var(--surface-color);border:1px dashed #9fb3b0;border-radius:6px}
+.staff .tbr{font-size:.9rem;color:#44565f;font-style:italic}
+.header {
+  height: 60px !important;
+  padding: 0 !important;
+}
+/* Team page hero */
+.team-hero {
+  position: relative;
+  min-height: 420px;
+
+  background-image: url("../img/ff59a9f4299f253956694825c080576f.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  text-align: center;
+}
+
+.team-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+.team-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.team-hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.team-hero-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+/* Research page hero */
+.research-hero {
+  position: relative;
+  min-height: 420px;
+
+  background-image: url("../img/e5fa609399027596dd7ade61bab09a8c.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+.research-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+.research-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.research-hero-content h2 {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.research-hero-content p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   GET INVOLVED HERO
+========================= */
+
+.get-involved-hero {
+  position: relative;
+  min-height: 420px;
+
+  background-image: url("../img/get-involved-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+.get-involved-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+.get-involved-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.get-involved-hero-content h1 {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.get-involved-hero-content p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.7;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =========================
+   INVOLVEMENT CARDS
+========================= */
+
+.involvement-card,
+.benefit-card {
+  height: 100%;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.involvement-card h3,
+.benefit-card h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.involvement-card ul {
+  padding-left: 20px;
+}
+
+.involvement-card li {
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.involvement-icon,
+.benefit-card > i {
+  font-size: 36px;
+  color: #198754;
+}
+
+.benefit-card > i {
+  display: block;
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   APPLICATION BOX
+========================= */
+
+.application-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.application-box h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.application-box h4 {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.application-box ul {
+  padding-left: 20px;
+}
+
+.application-button {
+  margin-top: 30px;
+}
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.partners li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
